@@ -1,7 +1,10 @@
-// React.render(
-//   <h1>Hello world!</h1>,
-//   document.getElementById('wrapper')
-// );
+/**
+*
+* TODO:
+* Need to rewrite the code.
+* Have better names and more structure.
+*
+**/
 
 // header creation
 var HeaderBox = React.createClass({
