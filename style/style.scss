@@ -1,6 +1,13 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import "menustyle";
 
 body {
+  background-color: #ffffff;
+}
+
+#content {
+  @include outer-container;
   background-color: #f6f6f6;
+  padding: 10px;
 }

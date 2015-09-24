@@ -1,0 +1,14 @@
+.nav ul li {
+  display: inline-block;
+  background-color: lightblue;
+  width: 100px;
+  margin-right: 10px;
+  height: 30px;
+  text-align: center;
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+.nav ul li:hover {
+  background-color: #90ebf9;
+}
