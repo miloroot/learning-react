@@ -3,81 +3,76 @@
 * TODO:
 * Need to rewrite the code.
 * Have better names and more structure.
+* Needs to look like:
+*
+* <wrapper>
+*   <header />
+*   <maincontainer />
+*   <footer />
+* </wrapper>
 *
 **/
 
 // header creation
-var HeaderBox = React.createClass({
+var Header = React.createClass({
   render: function() {
     return (
-      <div className="header">
-        <h1>Learn React and be awesome!</h1>
-      </div>
-    );
-  }
-});
-React.render(
-  <HeaderBox />,
-  document.getElementById('headercontainer')
-);
-
-// article creation
-var Comment = React.createClass({
-  render: function() {
-    return (
-      <div className="comment">
-        <p className="commentAuthor">
-          {this.props.author}
-        </p>
-        {this.props.children}
-      </div>
+      <header className="header">
+        <h1>Learning React!</h1>
+      </header>
     );
   }
 });
 
-// article render
-var CommentList = React.createClass({
+var Menu = React.createClass({
   render: function() {
     return (
-      <div className="commentList">
-        <Comment author="Milo Roots">This is an article.</Comment>
-        <Comment author="Patrik Roots">This is yet another article.</Comment>
-      </div>
+      <nav className="nav">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+        </ul>
+      </nav>
     );
   }
 });
 
-// body creation
-var MainBox = React.createClass({
+// maincontainer creation
+var MainContainer = React.createClass({
   render: function() {
     return (
-      <div className="main-contaner">
-        <p>
-          This is the main container!
-        </p>
-        <hr />
-        <p>Comments:</p>
-        <CommentList />
+      <div className="main-container">
+        <Menu />
+        <p>This is the .main-container</p>
       </div>
     );
   }
 });
-React.render(
-  <MainBox />,
-  document.getElementById('maincontainer')
-);
 
 // footer creation
-var FooterBox = React.createClass({
+var Footer = React.createClass({
   render: function() {
     return (
-      <div className="footer">
-        <small>Copyright 2015 , Milo.</small>
+      <footer className="footer">
+        <small>Copyright 2015. MiloRootCode.</small>
+      </footer>
+    );
+  }
+});
+
+// wrapper creation
+var Wrapper = React.createClass({
+  render: function() {
+    return (
+      <div className="wrapper">
+        <Header />
+        <MainContainer />
+        <Footer />
       </div>
     );
   }
 });
 React.render(
-  <FooterBox />,
-  document.getElementById('footercontainer')
+  <Wrapper />,
+  document.getElementById('content')
 );
