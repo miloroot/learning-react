@@ -1,6 +1,7 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 @import "menustyle";
+@import "poststyle.scss";
 
 body {
   background-color: #ffffff;
@@ -10,4 +11,8 @@ body {
   @include outer-container;
   background-color: #f6f6f6;
   padding: 10px;
+}
+
+.maincontainer {
+  background-color: #f9f9f9;
 }

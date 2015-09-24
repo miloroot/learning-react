@@ -17,6 +17,16 @@ html {
 .nav ul li:hover {
   background-color: #90ebf9; }
 
+.post {
+  margin-left: 40px; }
+
+.posttitle {
+  margin-bottom: 5px; }
+
+.postcontent {
+  margin-left: 15px;
+  margin-top: 0px; }
+
 body {
   background-color: #ffffff; }
 
@@ -30,5 +40,8 @@ body {
     clear: both;
     content: "";
     display: table; }
+
+.maincontainer {
+  background-color: #f9f9f9; }
 
 /*# sourceMappingURL=style.css.map */

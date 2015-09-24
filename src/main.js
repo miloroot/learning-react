@@ -1,13 +1,15 @@
 /**
 *
 * TODO:
-* Need to rewrite the code.
-* Have better names and more structure.
+* Need to rewrite the code. <- DONE.
+* Have better names and more structure. <- DONE.
 * Needs to look like:
 *
-* <wrapper>
-*   <header />
-*   <maincontainer />
+* <wrapper> <- DONE.
+*   <header /> <- DONE.
+*   <maincontainer> <- DONE.
+      <posts />
+    </maincontainer>
 *   <footer />
 * </wrapper>
 *
@@ -24,6 +26,7 @@ var Header = React.createClass({
   }
 });
 
+// menu creation
 var Menu = React.createClass({
   render: function() {
     return (
@@ -37,13 +40,36 @@ var Menu = React.createClass({
   }
 });
 
+// posts creation
+var Post = React.createClass({
+  render: function() {
+    return (
+      <div className="post">
+        <h3 className="posttitle">{this.props.title}</h3>
+        <p className="postcontent">{this.props.children}</p>
+      </div>
+    );
+  }
+});
+
+// postsList creation
+var PostsList = React.createClass({
+  render: function() {
+    return (
+      <div className="postslist">
+        <Post title="First post!">Is it working?</Post>
+        <Post title="Seconf post!">Second post, so I can style.</Post>
+      </div>
+    );
+  }
+});
+
 // maincontainer creation
 var MainContainer = React.createClass({
   render: function() {
     return (
-      <div className="main-container">
-        <Menu />
-        <p>This is the .main-container</p>
+      <div className="maincontainer">
+        <PostsList />
       </div>
     );
   }
@@ -66,6 +92,7 @@ var Wrapper = React.createClass({
     return (
       <div className="wrapper">
         <Header />
+        <Menu />
         <MainContainer />
         <Footer />
       </div>
